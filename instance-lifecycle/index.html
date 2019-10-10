@@ -57,13 +57,9 @@
 
       new Vue({
         el: '#app',
-        created() {
-          // debugger;
-          this.$nextTick(() => {
-            // debugger;
-            var ctx = document.querySelector('#myChart');
-            var myChart = new Chart(ctx, barChartOptions);
-          });
+        mounted() {
+          var ctx = document.querySelector('#myChart');
+          var myChart = new Chart(ctx, barChartOptions);
         },
       });
     </script>

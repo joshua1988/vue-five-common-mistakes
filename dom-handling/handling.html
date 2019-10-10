@@ -35,15 +35,6 @@
           </div>
         </li>
       </ul>
-
-      <!-- <ul>
-      <li v-for="(item, index) in items" @click="removeItem(index)">
-        <span>메뉴 1</span>
-        <div class="child hide" :ref="'listItem' + index">
-          메뉴 설명
-        </div>
-      </li>
-    </ul> -->
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
@@ -62,13 +53,3 @@
     </script>
   </body>
 </html>
-
-<!-- ```js
-new Vue({
-  methods: {
-    removeItem(index) {
-      event.target.lastChild.classList.toggle('hide');
-    },
-  }
-})
-``` -->
