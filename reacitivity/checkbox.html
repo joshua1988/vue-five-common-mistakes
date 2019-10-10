@@ -1,0 +1,63 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Reactivity Caveat 1</title>
+    <style>
+      li {
+        list-style: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <ul>
+        <li v-for="user in users">
+          <input
+            type="checkbox"
+            :name="user.name"
+            :id="user.id"
+            :checked="user.checked"
+            @change="user.checked = !user.checked"
+          />
+          <span>{{ user.name }}</span>
+        </li>
+      </ul>
+      <button @click="checkFirstUser">check the first check-box</button>
+      <button @click="uncheckFirstUser">uncheck the first check-box</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        data: {
+          users: [],
+        },
+        created() {
+          this.fetchUsers();
+        },
+        methods: {
+          fetchUsers() {
+            fetch('https://jsonplaceholder.typicode.com/users')
+              .then(response => response.json())
+              .then(data => {
+                this.users = data;
+                this.$set(this.users[0], 'checked', false);
+              })
+              .catch(error => console.log(error));
+          },
+          checkFirstUser() {
+            this.users[0].checked = true;
+            console.log('check state : ', this.users[0].checked);
+          },
+          uncheckFirstUser() {
+            this.users[0].checked = false;
+            console.log('check state : ', this.users[0].checked);
+          },
+        },
+      });
+    </script>
+  </body>
+</html>
