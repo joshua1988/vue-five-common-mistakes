@@ -44,7 +44,7 @@
               .then(response => response.json())
               .then(data => {
                 this.users = data;
-                // this.$set(this.users[0], 'checked', false);
+                this.$set(this.users[0], 'checked', false);
               })
               .catch(error => console.log(error));
           },

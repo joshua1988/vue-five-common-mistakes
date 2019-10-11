@@ -16,7 +16,15 @@
   <body>
     <div id="app">
       <ul>
-        <li @click="removeItem">
+        <li v-for="(item, index) in items" 
+          @click="removeItem(index)">
+          <span>{{ item }}</span>
+          <div class="child hide" ref="listItem">
+            메뉴 설명
+          </div>
+        </li>
+
+        <!-- <li @click="removeItem">
           <span>메뉴 1</span>
           <div class="child hide">
             메뉴 설명
@@ -33,7 +41,7 @@
           <div class="child hide">
             메뉴 설명
           </div>
-        </li>
+        </li> -->
       </ul>
     </div>
 
@@ -46,7 +54,8 @@
         },
         methods: {
           removeItem(index) {
-            event.target.lastChild.classList.toggle('hide');
+            this.$refs.listItem[index].classList.toggle('hide');
+            // event.target.lastChild.classList.toggle('hide');
           },
         },
       });
