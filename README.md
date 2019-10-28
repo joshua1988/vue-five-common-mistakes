@@ -8,7 +8,7 @@ This repository has code examples used for the presentation at 2019 W3C HTML5 Co
 
 ## 2019 FEConf Conference
 
-발표 중 작성한 코드는 발표가 끝난 후 새 브랜치에 업로드한 뒤 링크를 올려드릴 예정입니다 :)
+발표 중 작성한 코드는 이 [링크](https://github.com/joshua1988/vue-five-common-mistakes/commit/6e6c920eb7eb1ff3fa026226c183e729bc76a3fe)로 확인하세요.
 
 ## 2019 W3C HTML5 Conference
 
