@@ -2,6 +2,10 @@
 
 This repository has code examples used for the presentation at 2019 W3C HTML5 Conference and at 2019 FEConf in Korea.
 
+## Slides for DevC Hanoi
+
+You can find the slides [here](https://github.com/joshua1988/vue-five-common-mistakes/blob/master/pdf/vue-five-common-mistakes-gihyo-joshua-jang-DevC-Hanoi.pdf). All the code that I use on the presentation will be on [this branch](https://github.com/joshua1988/vue-five-common-mistakes/tree/devc).
+
 ## FEConf 발표 슬라이드
 
 발표 슬라이드는 [여기](https://github.com/joshua1988/vue-five-common-mistakes/blob/master/pdf/2019_FEConf_%EC%9E%A5%EA%B8%B0%ED%9A%A8.pdf)를 참고해주세요.
